@@ -1,0 +1,9 @@
+{
+  "name": "served",
+  "dependencies": {
+    "boost-date-time": "1.63.0",
+    "boost-asio": "1.63.0",
+    "re2": "1.0.0",
+    "boost-preprocessor": "1.63.0"
+  }
+}

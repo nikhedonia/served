@@ -1,0 +1,25 @@
+cxx_binary(
+  name = 'hello-world',
+  srcs = glob([
+    'hello_world/*.cpp'
+  ]),
+  compiler_flags = [
+    '-std=c++14',
+  ],
+  deps = [
+    '//:served',
+  ],
+)
+
+cxx_binary(
+  name = 'list-endpoints',
+  srcs = glob([
+    'list_endpoints/*.cpp'
+  ]),
+  compiler_flags = [
+    '-std=c++14',
+  ],
+  deps = [
+    '//:served',
+  ],
+)
