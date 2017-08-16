@@ -122,12 +122,16 @@ cxx_library(
   },
   srcs = glob([
     'src/served/**/*.cpp',
-  ]),
+  ], excludes = glob(['src/served/**/*.test.cpp'])),
   compiler_flags = [
     '-std=c++11',
   ],
   visibility = [
     'PUBLIC',
+  ],
+  exported_platform_linker_flags = [
+    ('^linux.*', ['-lpthread']),
+    ('default', ['-lpthread'])
   ],
   deps = BUCKAROO_DEPS,
 )
