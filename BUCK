@@ -130,8 +130,7 @@ cxx_library(
     'PUBLIC',
   ],
   exported_platform_linker_flags = [
-    ('^linux.*', ['-lpthread']),
-    ('default', ['-lpthread'])
+    ('^linux.*', ['-lpthread'])
   ],
   deps = BUCKAROO_DEPS,
 )
